@@ -159,6 +159,7 @@ button:hover {
     min-height: 500px;
     width: 100%;
     padding: 0 auto;
+    background-color: #140907;
 }
 #eventos h1{
     background-color: #140907;
@@ -171,13 +172,14 @@ button:hover {
     display: flex;
     flex-direction: row;
     padding-left: 32px;
-    gap: 50px;
+    gap: 30px;
+    justify-content: center;
+    min-height: 50px;
 }
 .container_eventos{
     display: flex;
     justify-content: center;
     gap: 25px;
-    flex-wrap: wrap;
     margin-top: 30px;
 }
 .card_item {
@@ -186,8 +188,50 @@ button:hover {
     background-color: #3B0A00;
     justify-content: center;
     margin-left: 20px;
+    
 }
-.descricao_eventos{
-    background-color: #140907;
-    min-height: 100px;
+#contatos{
+    min-height: 500px;
+   background-color: #A6F5E2;
+    
+}
+.qrf{
+    padding-top: 32px;
+}
+
+.style_form {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 16px;       
+}
+
+
+#nome_usuario, #email_usuario {
+    width: calc(50% - 8px); 
+    height: 48px;
+    box-sizing: border-box; 
+}
+
+#telefone_usuario, #comentarios {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#telefone_usuario {
+    height: 48px;
+}
+
+#comentarios {
+    height: 150px;
+    resize: vertical;
+}
+
+
+button {
+    height: 48px;
+    cursor: pointer;
+}
+.style_form input, 
+.style_form textarea {
+    font-size: 26px; 
 }
