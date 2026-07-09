@@ -33,7 +33,7 @@ header {
 }
 
 span {
-    color: white;
+    color: #2A2757;
 }
 
 
@@ -62,7 +62,53 @@ nav a h3{
 nav a:hover{
     color: white;
 }
+.slideshow {
+  position: relative;
+  width: 100%;
+  min-width: 1400px;
+  height: 400px;
+  overflow: hidden;
+}
 
+.slideshow img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0; 
+  animation: crossfade 8s infinite ease-in-out;
+}
+
+
+.slideshow img:nth-child(1) {
+  animation-delay: 0s;
+}
+
+
+.slideshow img:nth-child(2) {
+  animation-delay: 4s;
+}
+
+
+@keyframes crossfade {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1; 
+  }
+  45% {
+    opacity: 1; 
+  }
+  50% {
+    opacity: 0; 
+  }
+  100% {
+    opacity: 0; 
+  }
+}
 img {
    width: 100%;
    height: 650px; 
@@ -192,24 +238,27 @@ button:hover {
 }
 #contatos{
     min-height: 500px;
-   background-color: #A6F5E2;
+   background-color: #2A2757;
     
 }
 .qrf{
     padding-top: 32px;
+    padding-left: 20px;
 }
 
 .style_form {
     display: flex;
     flex-wrap: wrap; 
-    gap: 16px;       
+    gap: 16px;   
+    padding: 10px 20px;    
 }
 
 
 #nome_usuario, #email_usuario {
     width: calc(50% - 8px); 
-    height: 48px;
+    height: 50px;
     box-sizing: border-box; 
+    border-radius: 5px;
 }
 
 #telefone_usuario, #comentarios {
@@ -230,6 +279,8 @@ button:hover {
 button {
     height: 48px;
     cursor: pointer;
+    background-color: #275730;
+    color: white;
 }
 .style_form input, 
 .style_form textarea {
